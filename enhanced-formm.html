@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My HTML5 Project – Lists, Tables & Forms</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+        background-color: #fafafa;
+      }
+      header,
+      main,
+      footer {
+        max-width: 800px;
+        margin: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #666;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+      fieldset {
+        border: 1px solid #999;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+      }
+      input[type="submit"] {
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: auto;
+        padding: 10px 18px;
+      }
+      input[type="submit"]:hover {
+        background-color: #004999;
+      }
+      small {
+        display: block;
+        margin-top: 4px;
+        color: #555;
+      }
+      figure {
+        margin: 0;
+      }
+      figcaption {
+        font-size: 0.9em;
+        color: #444;
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My HTML5 Assignment Page</h1>
+      <p>
+        Welcome! This page is my practice space for HTML5 lists, tables, media,
+        and forms. I’ve mixed in a few personal touches so it’s not all boring
+        code.
+      </p>
+    </header>
+
+    <main>
+      <!-- LISTS -->
+      <section>
+        <h2>My Top Picks for Coding Languages</h2>
+        <p>
+          Here are some programming languages I’ve either used or want to learn
+          soon:
+        </p>
+        <ul>
+          <li>
+            Python – great for:
+            <ul>
+              <li>Data Science & Machine Learning</li>
+              <li>Web Development (Django, Flask)</li>
+            </ul>
+          </li>
+          <li>
+            JavaScript – super flexible:
+            <ul>
+              <li>Frontend work (React, Vue)</li>
+              <li>Backend with Node.js</li>
+            </ul>
+          </li>
+          <li>Java – old but gold, still everywhere</li>
+        </ul>
+      </section>
+
+      <!-- TABLE -->
+      <section>
+        <h2>How I Plan to Learn Web Development</h2>
+        <p>
+          This is my rough roadmap, broken down into stages and the tech I’ll
+          focus on:
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Technologies</th>
+              <th>Estimated Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frontend Basics</td>
+              <td>HTML, CSS, JavaScript</td>
+              <td>2 months</td>
+            </tr>
+            <tr>
+              <td>Backend Basics</td>
+              <td>Node.js, Express</td>
+              <td>3 months</td>
+            </tr>
+            <tr>
+              <td>Databases</td>
+              <td>MySQL, MongoDB</td>
+              <td>1 month</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- MEDIA -->
+      <section>
+        <h2>Something I’ve Been Listening To 🎵</h2>
+        <figure>
+          <video controls width="100%">
+            <source src="Upendo Nkone - Upendo wa Yesu.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>
+            One of my favorite gospel songs – “Upendo wa Yesu” by Upendo Nkone.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- FORM -->
+      <section>
+        <h2>Registration Form</h2>
+        <p>
+          Please fill in the form below. Don’t worry, all validation is handled
+          by HTML5 – no JavaScript trickery here.
+        </p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Jane Wanjiku"
+              required
+              minlength="3"
+              autocomplete="name"
+            />
+
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jane@example.com"
+              required
+              autocomplete="email"
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+254 712 345 678"
+              pattern="^\+?[0-9\s\-]{7,15}$"
+              required
+              autocomplete="tel"
+            />
+
+            <!-- Readonly example -->
+            <label for="memberid">Member ID:</label>
+            <input
+              type="text"
+              id="memberid"
+              name="memberid"
+              value="AUTO-2025-001"
+              readonly
+            />
+            <small
+              >This ID is assigned automatically and cannot be changed.</small
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Account Details</legend>
+
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="5"
+              placeholder="janewanji"
+              autocomplete="username"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+              autocomplete="off"
+            />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">-- Select Country --</option>
+              <option value="ke">Kenya</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <label>
+              <input type="checkbox" name="newsletter" value="yes" />
+              Subscribe to newsletter
+            </label>
+
+            <label>Preferred Contact Method:</label>
+            <label>
+              <input type="radio" name="contact" value="email" required /> Email
+            </label>
+            <label>
+              <input type="radio" name="contact" value="phone" /> Phone
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Notes</legend>
+            <label for="notes">Comments or Questions:</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Write your message here..."
+            ></textarea>
+          </fieldset>
+
+          <input type="submit" value="Submit Form" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Created by [Your Name] – HTML5 Practice Project</p>
+    </footer>
+  </body>
+</html>
